@@ -2,6 +2,17 @@ from __future__ import print_function
 
 import argparse
 import os
+import sys
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+
+# スクリプトのディレクトリを取得
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+# プロジェクトのルートディレクトリを取得
+project_root = os.path.dirname(script_dir)
+
+# プロジェクトのルートディレクトリをsys.pathに追加
+sys.path.append(project_root)
 import json
 import queue
 import torch

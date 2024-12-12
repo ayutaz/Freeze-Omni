@@ -1,7 +1,17 @@
 from __future__ import print_function
 
 import argparse
+import sys
 import os
+
+# スクリプトのディレクトリを取得
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+# プロジェクトのルートディレクトリを取得
+project_root = os.path.dirname(script_dir)
+
+# プロジェクトのルートディレクトリをsys.pathに追加
+sys.path.append(project_root)
 import json
 import queue
 import torch
